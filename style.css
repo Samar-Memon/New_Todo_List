@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+::-webkit-scrollbar{width: 3px}
+::-webkit-scrollbar-thumb{background-color: #ffe3c0;}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #232323;
+}
+.container{
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    min-height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px dotted #ffe3c0;
+}
+/* top-bar */
+.top-bar{
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 2px dotted #ffe3c0;
+}
+/* top-child-1 */
+.top-child-1{
+    width: 48%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* top-child-2 */
+.top-child-2{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* tasks-bar */
+.tasks-bar{
+    height: 540px;
+    overflow: auto;
+    list-style: none;
+}
+.task{
+    color: #ffe3c0;
+    border-bottom: 2px dotted #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.taskText{
+    width: 80%;
+    font-size: 18px;
+    border: 2px dotted #ffe3c0;
+    padding: 10px;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    width: 18%;
+    font-size: 20px;
+}
+.controls i{
+    border: 2px dotted #232323;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ffe3c0;
+    color: #232323;
+}
+/* Custom checkbox styles */
+label{
+    width: 30px;
+    height: 30px;
+    background-color: #ffe3c0;
+    position: relative;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+label div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #232323;
+    opacity: 0;
+}
+
+
+/* Bottom Bar */
+.bottom-menu-bar{
+    border-top: 2px dotted #ffe3c0;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-btn-bar{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #232323;
+    /* box-shadow: 1px 1px 7px #aaa; */
+    border: 2px dotted #ffe3c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-btn{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    background-color: #ffe3c0;
+    cursor: pointer;
+}
+.bottom-menu-bar i{
+    margin-inline: 20px;
+    font-size: 40px;
+    color: #ffe3c0;
+    cursor: pointer;
+}
+
+/* taskEditor */
+.taskEditor,.textEdit{
+    border: 2px solid green;
+    position: absolute;
+    width: 100%;
+    top: 7%;
+    left: 0;
+    height: 200px;
+    background-color: #ffe3c0;
+    color: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    display: none;
+}
+.input-bar{
+    width: 100%;
+    height: 35%;
+    position: relative;
+}
+.input-bar input{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px dotted #232323;
+    outline: none;
+}
+#addTask{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #232323;
+    color: #ffe3c0;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* .details-bar */
+.details-bar{
+    height: 540px;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+}
+.detailItem{
+    border: 4px dotted #ffe3c0;
+    color: #ffe3c0;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.detailItem p{
+    border: 1px solid #ffe3c0;
+    padding: 10px;
+}
